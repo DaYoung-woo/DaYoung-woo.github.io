@@ -99,5 +99,6 @@ $(document).ready(function () {
     };
   });
 
+  $(".light-theme").css("display": 'none')
 
 });
