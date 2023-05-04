@@ -1,16 +1,35 @@
 /* ===============
 	TYPOGRAPHY
 =============== */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/NotoSansKR-Regular.otf') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/NotoSansKR-Medium.otf') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/NotoSansKR-Bold.otf') format('woff2');
+}
+
 
 // Body font
 $base-font-size: 15px;
 $base-font-style: normal;
 $base-font-variant: normal;
 $base-font-weight: normal;
-$base-font-family: 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+$base-font-family: 'Open SansNoto Sans KR', sans-serif;
 $base-line-height: 28px;
 
 
 // Headings
 $heading-font-weight: 400;
-$heading-font-family: 'Volkhov', 'Times New Roman', Times, serif;
+$heading-font-family: 'Noto Sans KR', serif;
