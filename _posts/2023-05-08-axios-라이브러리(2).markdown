@@ -1,0 +1,175 @@
+---
+layout: post
+title: axios-라이브러리(2)
+image: 8.jpg
+categories: 라이브러리
+tags: [자바스크립트, javascript, axios, 라이브러리]
+---
+
+### Axios 인스턴스
+
+{% highlight js %}
+axios.create([config])
+{% endhighlight %}
+
+axios.create를 사용하면 인스턴스가 생성된다.
+
+인스턴스를 활용하면 코드의 길이와 중복을 줄일 수 있다.
+
+{% highlight js %}
+const instance = axios.create({
+  baseURL: 'https://some-domain.com/api/',
+});
+{% endhighlight %}
+
+{% highlight js %}
+instance.get('list')
+{% endhighlight %}
+<br/>
+
+***
+
+### Axios Config 기본값
+
+Config 설정은 글로벌, 인스턴스, 요청할 때 설정하는 방법이 있다.
+
+<br/>
+
+#### 글로벌 axios 기본(defaults) 설정
+
+모든 요청에 적용될 기본 값을 설정할 수 있다.
+
+{% highlight js %}
+axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+{% endhighlight %}
+<br />
+
+
+#### 사용자 정의 인스턴스 기본 설정
+
+{% highlight js %}
+// 인스턴스를 생성할때 config 기본값 설정하기
+const instance = axios.create({
+  baseURL: 'https://api.example.com'
+});
+
+// 인스턴스를 만든 후 기본값 변경하기
+instance.defaults.headers.common['Authorization'] = AUTH_TOKEN
+{% endhighlight %}
+<br />
+
+
+#### Config 우선 순위
+
+**인스턴스 호출 메서드 옵션 > 인스턴스.defaults 설정 옵션 > 인스턴스.create()에 설정된 옵션**
+
+{% highlight js %}
+// 라이브러리에서 제공하는 config 기본 값을 사용하여 인스턴스를 만들면
+// 이 시점에서 라이브러리의 기본 값인 timeout 구성은 '0' 입니다.
+const instance = axios.create();
+
+// 라이브러리의 timeout 기본 값을 2.5초로 재 정의하여
+// 인스턴스의 모든 요청은 2.5초 간만 대기 후 타임아웃 처리합니다.
+instance.defaults.timeout = 2500;
+
+// 최종적으로 인스턴스에 설정된 timeout 구성 값 5000으로 덮어씁니다.
+instance.get('/longRequest', {
+  timeout: 5000
+});
+{% endhighlight %}
+<br />
+
+
+실무에서 axios 인스턴스를 활용했던 경험들을 재현해보았다.
+
+아래 코드와 같이 토큰 세팅은 글로벌 axios를 url 세팅은 인스턴스를 활용했다.
+
+{% highlight js %}
+// 전역적으로 토큰 세팅
+axios.defaults.headers.common['Authorization'] = JWT;
+
+
+// 인스턴스마다 다른 URL 세팅
+const instance1 = axios.create({
+  baseURL: 'https://domain1.com/api/',
+});
+const instance2 = axios.create({
+  baseURL: 'https://domain2.com/api/',
+});
+const instance3 = axios.create({
+  baseURL: 'https://domain3.com/api/',
+});
+
+// 다른 토큰이 필요한 경우 변경
+instance.defaults.headers.common['Authorization'] = ACCESS_TOKEN;
+
+// 파일을 저장하거나 등의 이유로 config를 바꿔야 하는 경우 호출할 때 변경
+instance3.post('insert_file', {
+  headers: {
+    "Content-Type": "multipart/form-data",
+  }
+})
+{% endhighlight %}
+
+
+
+<br/>
+
+***
+
+### 응답 스키마(Schema)
+
+axios 요청으로 돌아오는 return 정의 값들이다.
+
+{% highlight js %}
+{
+  // `data`는 서버가 제공한 응답(데이터)입니다.
+  data: {},
+
+  // `status`는 서버 응답의 HTTP 상태 코드입니다.
+  status: 200,
+
+  // `statusText`는 서버 응답으로 부터의 HTTP 상태 메시지입니다.
+  statusText: 'OK',
+
+  // `headers` 서버가 응답 한 헤더는 모든 헤더 이름이 소문자로 제공됩니다.
+  headers: {},
+
+  // `config`는 요청에 대해 `axios`에 설정된 구성(config)입니다.
+  config: {},
+
+  // `request`는 응답을 생성한 요청입니다.
+  // 브라우저: XMLHttpRequest 인스턴스
+  // Node.js: ClientRequest 인스턴스(리디렉션)
+  request: {}
+}
+{% endhighlight %}
+<br/>
+
+Axios는 **Promise** 기반으로 작동한다.
+**then**을 사용하면 다음과 같이 응답을 받을 수 있다.
+
+{% highlight js %}
+axios.get('/user/12345')
+  .then(function (response) {
+    console.log(response.data);
+    console.log(response.status);
+    console.log(response.statusText);
+    console.log(response.headers);
+    console.log(response.config);
+  });
+{% endhighlight %}
+<br/> 
+
+주로 **data**에 있는 값들만 사용하는 경우가 많다.
+그래서 구조분해할당을 통해 **data**만 받아와서 사용한다.
+
+
+{% highlight js %}
+axios.get('/user/12345')
+  .then(({data}) => {
+    console.log(data);
+  });
+{% endhighlight %}
+<br/> 

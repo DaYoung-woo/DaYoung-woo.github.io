@@ -85,8 +85,9 @@ axios({
 axios('/user/12345') // 암묵적으로 get 요청으로 인식
 axios('/user/12345', { method: 'post' })
 {% endhighlight %}
-
 <br/>
+
+***
 
 ### axios 별칭
 편의를 위해 지원되는 모든 요청 메소드에 별칭이 제공된다.
@@ -104,8 +105,9 @@ axios.request(config)
 axios.head(url[, config])
 axios.options(url[, config])
 {% endhighlight %}
-
 <br/>
+
+***
 
 #### axios config(설정)
 
@@ -280,6 +282,8 @@ config도 항상 사용하는 것만 사용해서 이렇게 종류가 다양한 
   //  `true`로 설정하면, 압축 해제된 모든 응답에서 'content-encoding' 헤더도 제거됩니다.
   // Node.js 전용 (XHR은 압축 해제할 수 없습니다)
   decompress: true // 기본값
-
+  
 }
 {% endhighlight %}
+<br/>
+
