@@ -1,0 +1,69 @@
+---
+layout: post
+title: axios-라이브러리(3)
+image: 2.png
+categories: 라이브러리
+tags: [자바스크립트, javascript, axios, 라이브러리]
+---
+
+### axios 인터셉터
+
+**then** 또는 **catch**로 처리되기 전에 요청과 응답을 가로챌수 있다.
+
+{% highlight js %}
+// 요청 인터셉터 추가하기
+axios.interceptors.request.use(function (config) {
+    // 요청이 전달되기 전에 작업 수행
+    return config;
+  }, function (error) {
+    // 요청 오류가 있는 작업 수행
+    return Promise.reject(error);
+  });
+
+// 응답 인터셉터 추가하기
+axios.interceptors.response.use(function (response) {
+    // 2xx 범위에 있는 상태 코드는 이 함수를 트리거 합니다.
+    // 응답 데이터가 있는 작업 수행
+    return response;
+  }, function (error) {
+    // 2xx 외의 범위에 있는 상태 코드는 이 함수를 트리거 합니다.
+    // 응답 오류가 있는 작업 수행
+    return Promise.reject(error);
+  });
+{% endhighlight %}
+<br />
+
+사용자 정의 axios 인스턴스에 인터셉터를 추가 할 수 있다.
+{% highlight js %}
+const instance = axios.create();
+instance.interceptors.request.use(function () { /*...*/ });
+{% endhighlight %}
+<br />
+
+아래 코드처럼 인터셉터에서 토큰을 세팅하는 경우도 많은 것 같다.
+{% highlight js %}
+// header에 값을 싣는다.
+instance.interceptors.request.use(
+  function (config) {
+    config.headers["Content-Type"] = "application/json; charset=utf-8";
+    config.headers["Authorization"] = " 토큰 값";
+    return config;
+  },
+  function (error) {
+    console.log(error);
+    return Promise.reject(error);
+  }
+);
+{% endhighlight %}
+<br />
+
+내가 인터셉터를 사용하는 경우는 주로 토큰이 만료되었을 때다.
+
+토큰이 만료되면 요청했던 api의 return 값이 401 권한없음으로 돌아온다.
+
+만약 리프레시 토큰의 만료기간이 지났다면 로그아웃 시키고
+
+지나지 않았다면 다시 토큰을 발행하고 요청하던 api 처리를 해줘야 한다.
+
+인터셉터에서 토큰 재발행 하고 요청했던 api를 마저 처리하는 역할을 해줬다.
+
