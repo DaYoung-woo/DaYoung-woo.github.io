@@ -47,9 +47,16 @@
         color: $blue-dark;
       }
     }
-    .c-post-date,
-    .c-post-words {
-      font-size: 12px;
+    .c-post-date, .c-post-words{
+      display: flex;
+      justify-items: center ;
+      align-items: center;
+      font-size: 13px;
+      svg{
+        margin-right: 4px;
+        width: 15px;
+        height: 15px;
+      }
     }
   }
 }

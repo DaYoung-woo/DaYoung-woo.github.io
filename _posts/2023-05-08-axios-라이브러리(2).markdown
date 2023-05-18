@@ -2,6 +2,8 @@
 layout: post
 title: axios-라이브러리(2)
 image: 2.png
+excerpt: 
+  axios 공식문서를 흝어보고 정리한 글입니다.
 categories: 라이브러리
 tags: [자바스크립트, javascript, axios, 라이브러리]
 ---
