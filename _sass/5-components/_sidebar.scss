@@ -108,8 +108,11 @@
     margin: 15px 0;
     .c-social__item {
       display: inline-block;
-      width: 27px;
-      height: 27px;
+      width: 20px;
+      height: 20px;
+      #svg-linkin{
+        filter: invert(26%) sepia(72%) saturate(1580%) hue-rotate(190deg) brightness(103%) contrast(100%);
+      }
     }
     .icon {
       width: 27px;

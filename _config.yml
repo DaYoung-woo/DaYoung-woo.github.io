@@ -1,11 +1,11 @@
-title: Welcome to Flexton
+title: Dayoung's Blog
 description: Flexton is a responsive and ultra-minimal theme for Jekyll.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "flexton.netlify.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author
 author-name: WooDaYoung
-author-image: 1.jpg
+author-image: profile.jpg
 author-job: Frontend Developer
 author-email: iamwooda0@gmail.com # Add your email for contant form.
 about-author: 
@@ -13,7 +13,7 @@ about-author:
 # Social settings
 social-notion: https://www.notion.so/6b057559a9f24ebdba9fd4357ca2ef2e?v=8c80117da3664968b4165676b18b44e6
 social-github: DaYoung-woo
-social-linkedin:
+social-linkedin: a
 
 # Newsletter
 mailchimp: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e

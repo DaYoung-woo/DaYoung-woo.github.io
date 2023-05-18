@@ -14,7 +14,7 @@ layout: default
     </div>
     <div class="c-contact-menu">
       {% if site.author-email %}
-      <a href="/contact" class="c-contact-btn c-btn c-btn--secondary c-btn--round c-btn--shadow"><span data-icon='ei-envelope' data-size='s'></span> Send me</a>
+      <a href="/contact" class="c-contact-btn c-btn c-btn--secondary c-btn--round"><span data-icon='ei-envelope' data-size='s'></span> Send me</a>
       {% else %}
       {% endif %}
       {% if site.author-twitter %}
@@ -38,11 +38,19 @@ layout: default
         {% else %}
         {% endif %}
         {% if site.social-github %}
-          <li class="c-social__item"><a href="https://github.com/{{site.social-github}}" target="_blank"><div data-icon='ei-sc-github' data-size='s'></div></a></li>
+          <li class="c-social__item">
+            <a href="https://github.com/{{site.social-github}}" target="_blank">
+              <img src="{{site.baseurl}}/images/github.svg" />
+            </a>
+          </li>
         {% else %}
         {% endif %}
         {% if site.social-linkedin %}
-          <li class="c-social__item"><a href="https://in.linkedin.com/in/{{site.social-linkedin}}" target="_blank"><div data-icon='ei-sc-linkedin' data-size='s'></div></a></li>
+          <li class="c-social__item">
+            <a href="https://in.linkedin.com/in/{{site.social-linkedin}}" target="_blank">
+              <img src="{{site.baseurl}}/images/linkedin.svg" id="svg-linkin"/>
+            </a>
+          </li> 
         {% else %}
         {% endif %}
       </ul>
