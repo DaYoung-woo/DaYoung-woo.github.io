@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Typescript-개요
-image: typescript_log.png
+image: typescript_logo.png
 categories: typescript
 tags: [타입스트립트, typescript, vscode]
 ---
