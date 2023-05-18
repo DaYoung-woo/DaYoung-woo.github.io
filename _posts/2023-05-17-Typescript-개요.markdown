@@ -35,7 +35,8 @@ const area = obj.width \* obj.heigth;
 {% endhighlight %}
 <br/>
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/83bd34fe-9969-475b-b29f-69e7fbac1f66/Untitled.png)
+![Untitled (1)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/42fec001-e100-44a0-b9ec-d2b2be7c5cad)
+
 add 함수의 첫번째 매개변수 a는 숫자값이 와야 한다.  
 10 + 10 = 20 이지만 10 + ‘10’ = 1010이 된다.  
 숫자와 문자열을 더할 경우 숫자를 문자열로 인식하기 때문에 원하는 결과를 얻지 못한다.  
@@ -46,8 +47,19 @@ add 함수의 첫번째 매개변수 a는 숫자값이 와야 한다.
 #### 2. 코드 자동 완성과 가이드
 
 JS와 다르게 TS는 타입이 정해져 있기 때문에 해당 타입에서 쓸 수 있는 API를 미리 보여주고 사용하고 싶은 API를 tab을 이용해 글자를 자동 완성시켜 준다.
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/852323c5-a3b5-4ce1-87e2-b37e0b7195da/Untitled.png)
+![Untitled (2)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/6dc06cd1-3037-4b2f-8a31-c993e6ed0de8)
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/30142d12-6571-4b5b-8969-e2514a1dd630/Untitled.png)
+![Untitled (3)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/7364a273-f2fd-4f9d-94f4-8bad5102fe7e)
+![Untitled (4)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/1b7df9f7-2514-4c0c-8325-da1a5adebf74)
+![Untitled (5)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/6142ed46-a912-4e4a-acb1-bddc42b5a90d)
+![Untitled (6)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/a13bee1b-7e13-4da7-9ac0-1ab78bf44d02)
+![Untitled (7)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/63bcb25f-603a-4a20-8bce-009609c1a804)
+![Untitled (8)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/2fa03c85-fe57-47f1-8a70-11bb0efccf6f)
+
+
+
+
+
 <br />
 
 ---
