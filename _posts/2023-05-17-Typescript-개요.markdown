@@ -35,6 +35,7 @@ const area = obj.width \* obj.heigth;
 {% endhighlight %}
 <br/>
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/83bd34fe-9969-475b-b29f-69e7fbac1f66/Untitled.png)
 add 함수의 첫번째 매개변수 a는 숫자값이 와야 한다.  
 10 + 10 = 20 이지만 10 + ‘10’ = 1010이 된다.  
 숫자와 문자열을 더할 경우 숫자를 문자열로 인식하기 때문에 원하는 결과를 얻지 못한다.  
@@ -45,6 +46,8 @@ add 함수의 첫번째 매개변수 a는 숫자값이 와야 한다.
 #### 2. 코드 자동 완성과 가이드
 
 JS와 다르게 TS는 타입이 정해져 있기 때문에 해당 타입에서 쓸 수 있는 API를 미리 보여주고 사용하고 싶은 API를 tab을 이용해 글자를 자동 완성시켜 준다.
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/852323c5-a3b5-4ce1-87e2-b37e0b7195da/Untitled.png)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/30142d12-6571-4b5b-8969-e2514a1dd630/Untitled.png)
 <br />
 
 ---
@@ -53,3 +56,21 @@ JS와 다르게 TS는 타입이 정해져 있기 때문에 해당 타입에서 �
 
 - DOC 어노테이션을 추가하여 js를 typescript처럼 사용할 수 있다
 - 한 번에 타입스크립트로 적용하는 것이 부담스러울 때 자바스크립트 코드에 JSDOC을 사용해 점차 typescript를 적용해 나갈 수 있다.
+
+![API 미리보기를 제공](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f8e55901-a9de-4dca-97f0-ad715fecc20a/Untitled.png)
+
+API 미리보기를 제공
+![함수에 대한 타입 정보 제공](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f26f9591-b530-4599-8695-a60547817437/Untitled.png)
+
+함수에 대한 타입 정보 제공
+
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cde9c39c-7d5c-4763-9556-12d577488639/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0eb626ef-5b29-464b-ae4f-55ac1e7c686e/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/880fc5d6-13b4-481e-b66b-ef41a3974d80/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dec43d1f-edfc-47fe-875b-b79272d2b6fd/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20cef2fe-64e8-4a95-bbb9-8df15cf74b9f/Untitled.png)
