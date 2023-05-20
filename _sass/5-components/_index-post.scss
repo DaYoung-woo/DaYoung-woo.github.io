@@ -20,10 +20,10 @@
   overflow: hidden;
   transition: $global-transition;
   background-color: $white-color;
-  box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
+  box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
   &:hover {
     transform: translate(0px, -2px);
-    box-shadow: 0 15px 45px -10px rgba(10, 16, 34, .2)
+    box-shadow: 0 15px 45px -10px rgba(10, 16, 34, 0.2);
   }
   .c-post-thumbnail {
     display: block;
@@ -31,7 +31,7 @@
     max-width: 100%;
     min-height: 180px;
     border-radius: 10px 0 0 10px;
-    background-color: rgba(220,235,245,0.2);
+    background-color: rgba(220, 235, 245, 0.2);
     background-size: cover;
     background-position: 50% 50%;
   }
@@ -47,12 +47,21 @@
         color: $blue-dark;
       }
     }
-    .c-post-date, .c-post-words{
+    .tag-text {
+      color: #ff5f2e;
+      padding-right: 2px;
+    }
+    .c-post-date {
+      padding-top: 10px;
+    }
+    .c-post-date,
+    .c-post-words {
       display: flex;
-      justify-items: center ;
+      justify-items: center;
       align-items: center;
       font-size: 13px;
-      svg{
+      line-height: 20px;
+      svg {
         margin-right: 4px;
         width: 15px;
         height: 15px;

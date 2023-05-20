@@ -13,14 +13,8 @@ layout: default
       <span class="c-author__job">{{site.author-job}}</span>
     </div>
     <div class="c-contact-menu">
-      <!-- {% if site.author-email %}
-      <a href="/contact" class="c-contact-btn c-btn c-btn--secondary c-btn--round"><span data-icon='ei-envelope' data-size='s'></span> Send me</a>
-      {% else %}
-      {% endif %} -->
-      {% if site.author-twitter %}
-      <a href="https://twitter.com/intent/user?screen_name={{ site.social-twitter }}" class="c-btn c-btn--primary c-btn--round c-btn--shadow"><span data-icon='ei-sc-twitter' data-size='s'></span> Follow me</a>
-      {% else %}
-      {% endif %}
+      <ul class="c-categories__list u-lists-reset">
+      </ul>
     </div>
     <p class="c-author__about">{{site.about-author | strip_html | truncatewords: 50}}</p>
   </div>

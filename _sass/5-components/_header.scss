@@ -22,7 +22,8 @@
 }
 
 .c-search {
-  width: 80%;
+  width: 100%;
+  min-width: 400px;
   .c-search__box {
     display: flex;
     align-items: center;
