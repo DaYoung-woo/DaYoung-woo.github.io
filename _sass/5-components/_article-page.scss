@@ -24,13 +24,16 @@
   &:after {
     content: "";
     display: block;
-    padding-top: 50%;
+    padding-top: 10%;
   }
 }
 
 .c-article__header {
+  padding-top: 40px;
+  padding-bottom: 40px;
   margin-bottom: 20px;
   text-align: center;
+  border-bottom: 1px solid #ddd;
   .c-article__title {
     margin-bottom: 10px;
   }
