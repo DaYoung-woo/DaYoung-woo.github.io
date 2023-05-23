@@ -23,14 +23,13 @@
 
 .c-search {
   width: 100%;
-  min-width: 400px;
   .c-search__box {
     display: flex;
     align-items: center;
   }
   .c-search__text {
     position: relative;
-    width: 80%;
+    width: 100%;
     padding: 10px 10px 10px 40px;
     border: 1px solid $blue-lighter;
     border-radius: 30px;
