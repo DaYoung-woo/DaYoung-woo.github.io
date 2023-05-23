@@ -24,7 +24,7 @@ String, Number, Boolean와 같은 (대문자로 시작하는) 타입은 유효�
 
 ### boolean
 
-- boolean 값이라고 일컫는 참/거짓(true/false) 값이다.
+boolean 값이라고 일컫는 참/거짓(true/false) 값이다.
 
 {% highlight ts %}
 let show: boolean = true;
@@ -35,8 +35,8 @@ let show: boolean = true;
 
 ### number
 
-- 부동 소수에는 `number`라는 타입이 붙혀진다.  
-- 16진수, 10진수 뿐만 아니라 진수, 8진수 리터럴도 지원한다.
+부동 소수에는 `number`라는 타입이 붙혀진다.  
+16진수, 10진수 뿐만 아니라 진수, 8진수 리터럴도 지원한다.
 
 {% highlight ts %}
 let decimal: number = 6;
@@ -50,9 +50,9 @@ let octal: number = 0o744;
 
 ### string
 
-- 텍스트 데이터 타입을 `string`으로 표현한다.  
-- 큰따옴표 (`"`)나 작은따옴표 (`'`)를 문자열 데이터를 감싸는데 사용한다.  
-- **템플릿 문자열**을 사용하면 여러 줄에 걸쳐 문자열을 작성할 수 있으며, 표현식을 포함시킬 수도 있다.
+텍스트 데이터 타입을 `string`으로 표현한다.  
+큰따옴표 (`"`)나 작은따옴표 (`'`)를 문자열 데이터를 감싸는데 사용한다.  
+**템플릿 문자열**을 사용하면 여러 줄에 걸쳐 문자열을 작성할 수 있으며, 표현식을 포함시킬 수도 있다.
 
 {% highlight ts %}
 let decimal: number = 6;
@@ -66,7 +66,7 @@ let octal: number = 0o744;
 
 ### 배열
 
-- 배열 타입은 두 가지 방법으로 쓸 수 있다.
+배열 타입은 두 가지 방법으로 쓸 수 있다.
 
 #### 1. 배열 요소들을 나타내는 타입 뒤에 [ ] 를 사용
 {% highlight ts %}
@@ -77,8 +77,8 @@ let list: number[] = [1, 2, 3];
 
 #### 2. 제네릭 배열 타입을 사용
 
-- **Array<>** 꺽새 괄호 안에 사용할 타입을 입력해줘야 한다.
-- **[number]**는 전혀 다른 의미를 가진다.(튜플 타입에서 참조)
+**Array<>** 꺽새 괄호 안에 사용할 타입을 입력해줘야 한다.
+**[number]**는 전혀 다른 의미를 가진다.(튜플 타입에서 참조)
 
 {% highlight ts %}
 // string, number와 다르게 Array는 첫 스펠링이 대문자
@@ -96,10 +96,10 @@ let heroes: Array<string>= ['capt', 'Thor', 10]
 
 ### any
 
-- 특정 값으로 인하여 타입 검사 오류가 발생하는 것을 원하지 않을 때 사용할 수 있다.
-- 사용자로부터 받은 데이터나 서드 파티 라이브러리 같은 동적인 컨텐츠에서 오는 값은 타입을 알지 못할 수도 있다.
-- 이 경우 any를 사용하면 타입 검사를 하지 않고, 그 값들이 컴파일 시간에 검사를 통과시켜준다.
-- object를 사용하면 되지 않을까? 생각할 수 있지만 object를 쓰면 오류가 발생할 수 있다.
+특정 값으로 인하여 타입 검사 오류가 발생하는 것을 원하지 않을 때 사용할 수 있다.
+사용자로부터 받은 데이터나 서드 파티 라이브러리 같은 동적인 컨텐츠에서 오는 값은 타입을 알지 못할 수도 있다.
+이 경우 any를 사용하면 타입 검사를 하지 않고, 그 값들이 컴파일 시간에 검사를 통과시켜준다.
+object를 사용하면 되지 않을까? 생각할 수 있지만 object를 쓰면 오류가 발생할 수 있다.
 {% highlight ts %}
 let notSure: any = 4;
 notSure.ifItExists(); // 성공, ifItExists 는 런타임엔 존재할 것입니다.
@@ -117,8 +117,8 @@ prettySure.toFixed(); // 오류: 프로퍼티 'toFixed'는 'Object'에 존재하
 
 ### 함수
 
-- 함수는 JavaScript에서 데이터를 주고 받는 주요 수단이다.
-- TypeScript에서는 함수의 입력 및 출력 타입을 지정할 수 있다.
+함수는 JavaScript에서 데이터를 주고 받는 주요 수단이다.
+TypeScript에서는 함수의 입력 및 출력 타입을 지정할 수 있다.
 
 {% highlight ts %}
 // 함수의 파라미터에 타입을 정의하는 방식
@@ -140,16 +140,20 @@ function add(a: number, b: number): number {
 {% endhighlight %}
 <br />
 
-- JS에서는 매개변수의 수와 인수가 일치하지 않아도 된다.  
+JS에서는 매개변수의 수와 인수가 일치하지 않아도 된다.  
 ![1](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/94c0b2bb-9a7e-4184-b1eb-b7d350e59718)
-<br />
+<br />  
 
-- 하지만 TS에서는 오류로 인식된다.  
+하지만 TS에서는 오류로 인식된다.  
+또한 매개변수에 타입이 표기되었다면, 해당 함수에 대한 인자는 검사가 이루어진다.  
+인수가 부족한 경우  
 ![2](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/f35ddc45-9941-45ac-bf17-bbfd3f8fde59)  
+
+인수가 초과되는 경우  
 ![3](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/e5768c32-67d0-4de9-baa8-0a959ae5ff70)
 <br />
 
-- 또한 매개변수에 타입이 표기되었다면, 해당 함수에 대한 인자는 검사가 이루어진다.
+
 {% highlight ts %}
 // 매개변수 타입 표기
 function greet(name: string) {
@@ -163,9 +167,26 @@ Argument of type 'number' is not assignable to parameter of type 'string'.
 {% endhighlight %}
 <br />
 
+#### 함수의 옵셔널 파라미터
+{% highlight ts %}
+// 물음표를 붙이면 선택 값으로 설정된다.
+function log(a: string, b?: string, c?: string) {
+  console.log(a)
+  console.log(b)
+  console.log(c)
+}
+log('hello','hi')
+{% endhighlight %}
+
+필수 매개 변수는 선택 매개 변수 뒤에 올 수 없다.(에러 발생)  
+![Untitled (4)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/408880d8-c75f-4672-8033-3dac6a3bb83a)
+<br />
+
+--- 
+
 ### 익명함수
 
-- 익명 함수는 코드상에서 위치한 곳을 보고 해당 함수가 어떻게 호출될지 알아낼 수 있다면, TypeScript는 해당 함수의 매개 변수에 자동으로 타입을 부여한다.
+익명 함수는 코드상에서 위치한 곳을 보고 해당 함수가 어떻게 호출될지 알아낼 수 있다면, TypeScript는 해당 함수의 매개 변수에 자동으로 타입을 부여한다.
 
 {% highlight ts %}
 // 아래 코드에는 타입 표기가 전혀 없지만, TypeScript는 버그를 감지할 수 있습니다.
@@ -184,3 +205,41 @@ Property 'toUppercase' does not exist on type 'string'. Did you mean 'toUpperCas
 });
 {% endhighlight %}
 <br />
+
+### 객체 타입
+
+원시 타입을 제외하고 가장 많이 마주치는 타입은 객체 타입이다.  
+각 프로퍼티의 타입 표기 또한 선택 사항이며 만약 타입을 지정하지 않으면 **any** 타입으로 간주한다.
+
+{% highlight ts %}
+let obj: object = {};
+let person: object = {
+	name: 'capt',
+	age: 100
+};
+
+// 좀 더 구체적으로 설정도 가능
+let person2: object = {name: string, age: number} = {
+	name: 'Thor',
+	age: 200
+}
+{% endhighlight %}
+<br />
+
+#### 옵셔널 프로퍼티
+
+프로퍼티 이름 뒤에 ?를 붙이면 선택적인 타입으로 지정된다.
+{% highlight ts %}
+function printName(obj: { first: string; last?: string }) {
+  // 오류 - `obj.last`의 값이 제공되지 않는다면 프로그램이 멈추게 됩니다!
+  console.log(obj.last.toUpperCase());
+'obj.last' is possibly 'undefined'.
+  if (obj.last !== undefined) {
+    // OK
+    console.log(obj.last.toUpperCase());
+  }
+ 
+  // 최신 JavaScript 문법을 사용하였을 때 또 다른 안전한 코드
+  console.log(obj.last?.toUpperCase());
+}
+{% endhighlight %}  
