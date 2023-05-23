@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Typescript의 일상(?) 타입 everyday type(2)
+title: Typescript의 everyday type(2)
 image: typescript_logo.png
 excerpt: 
   typescript의 기본 타입
@@ -77,15 +77,15 @@ let list: number[] = [1, 2, 3];
 
 #### 2. 제네릭 배열 타입을 사용
 
-- **Array<>** 꺽새 괄호 안에 사용할 타입을 입력해줘야 함
-- **[number]**는 전혀 다른 의미를 가진다(튜플 타입에서 참조)
+- **Array<>** 꺽새 괄호 안에 사용할 타입을 입력해줘야 한다.
+- **[number]**는 전혀 다른 의미를 가진다.(튜플 타입에서 참조)
 
 {% highlight ts %}
 // string, number와 다르게 Array는 첫 스펠링이 대문자
 let arr: Array<number> = [1,2,3];
 {% endhighlight %}  
 
-- 만약 꺽새 괄호 안 타입과 다른 타입을 입력하면 오류로 표시됨
+- 만약 꺽새 괄호 안 타입과 다른 타입을 입력하면 오류로 표시된다.
 {% highlight ts %}
 // 'number' 형식은 'string' 형식에 할당할 수 없습니다.
 let heroes: Array<string>= ['capt', 'Thor', 10]
@@ -141,12 +141,12 @@ function add(a: number, b: number): number {
 <br />
 
 - JS에서는 매개변수의 수와 인수가 일치하지 않아도 된다.  
-이미지1
+![1](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/94c0b2bb-9a7e-4184-b1eb-b7d350e59718)
 <br />
 
 - 하지만 TS에서는 오류로 인식된다.  
-이미지2  
-이미지3  
+![2](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/f35ddc45-9941-45ac-bf17-bbfd3f8fde59)  
+![3](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/e5768c32-67d0-4de9-baa8-0a959ae5ff70)
 <br />
 
 - 또한 매개변수에 타입이 표기되었다면, 해당 함수에 대한 인자는 검사가 이루어진다.
