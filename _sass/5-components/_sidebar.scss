@@ -3,9 +3,6 @@
 =============== */
 
 .c-sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -19,8 +16,8 @@
 
 .c-sidebar-author {
   .c-author__cover {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     margin: 0 auto 10px;
     border-radius: 50%;
     overflow: hidden;
@@ -48,6 +45,7 @@
   }
   .c-author__info {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    
   }
   .c-author__name {
     font-size: 18px;
@@ -72,36 +70,42 @@
   }
 }
 
-.c-sidebar-footer {
-  .c-social__title {
-    position: relative;
-    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: $darkest;
-    &::before {
-      content: "";
-      display: block;
-      height: 2px;
-      width: calc(50% - 40px);
-      transform: translateY(-50%);
-      position: absolute;
-      top: 50%;
-      left: 0;
-      background-color: $darkest;
-    }
-    &::after {
-      content: "";
-      display: block;
-      height: 2px;
-      width: calc(50% - 40px);
-      transform: translateY(-50%);
-      position: absolute;
-      top: 50%;
-      right: 0;
-      background-color: $darkest;
-    }
+
+.c-social__title {
+  position: relative;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: $darkest;
+  &::before {
+    content: "";
+    display: block;
+    height: 0.1px;
+    width: calc(50% - 40px);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: $darkest;
   }
+  &::after {
+    content: "";
+    display: block;
+    height: 0.1px;
+    width: calc(50% - 40px);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background-color: $darkest;
+  }
+}
+
+.c-sidebar-footer {
+  height: 115px;
+  position: fixed;
+  bottom: 0;
+  width: 200px;
   .c-social__list {
     list-style-type: none;
     padding: 0;
@@ -198,6 +202,19 @@
     }
     .c-copyright {
       @include screen-reader();
+    }
+  }
+}
+
+
+.c-sidebar-body{
+  margin-top: 10px;
+  ul {
+    text-align: left;
+    margin-top: 10px;
+    li {
+      display: block;
+      text-align: left;
     }
   }
 }

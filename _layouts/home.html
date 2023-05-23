@@ -12,17 +12,28 @@ layout: default
       <div class="c-author__name">{{site.author-name}}</div>
       <span class="c-author__job">{{site.author-job}}</span>
     </div>
-    <div class="c-contact-menu">
-      <ul class="c-categories__list u-lists-reset">
-      </ul>
-    </div>
-    <p class="c-author__about">{{site.about-author | strip_html | truncatewords: 50}}</p>
   </div>
 
   <div class="c-sidebar-body">
 
+    <div class="c-social__title">전체 글 {{size}}개</div>
+    <ul class="sidebar-category">
+      {% capture cats %} {% for cat in site.categories %} {{ cat | first }} {% endfor %} {% endcapture %} {% assign sortedCats = cats | split: ' ' | sort %} {% for category in sortedCats %}
+      {{cat}}
+        <li >
+          {% assign cat_dir = site.category_dir | default: 'category' %}
+          <a href="{{ site.baseurl }}/{{ cat_dir }}/{{ category | downcase | slugify }}/">
+            {% for post in site.categories[category] limit: 1 %}
+            {% assign empty-figure = nil %}
+            {% endfor %}
+            <div class="c-categories__container {{empty-figure}}">
+              <h2 class="c-categories__header" style="text-align: left;">{{ category }} <span>{{site.categories[category] | size}}</span></h2>
+            </div>
+          </a>
+        </li>
+        {% endfor %}
+    </ul>
   </div>
-
 
   <div class="c-sidebar-footer">
     <div class="c-social">
