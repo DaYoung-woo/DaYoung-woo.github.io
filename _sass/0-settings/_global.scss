@@ -12,3 +12,13 @@ $global-radius: 5px;
 
 // Transition
 $global-transition: .35s;
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}

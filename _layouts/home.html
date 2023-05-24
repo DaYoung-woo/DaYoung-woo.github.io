@@ -16,8 +16,13 @@ layout: default
 
   <div class="c-sidebar-body">
 
-    <div class="c-social__title">전체 글 {{size}}개</div>
+    <div class="c-social__title">category</div>
     <ul class="sidebar-category">
+      <li>
+        <a href="{{ site.baseurl }}/">
+          전체 <div class="category-count">{{post}}</div>
+        </a>
+      </li>
       {% capture cats %} {% for cat in site.categories %} {{ cat | first }} {% endfor %} {% endcapture %} {% assign sortedCats = cats | split: ' ' | sort %} {% for category in sortedCats %}
       {{cat}}
         <li >
@@ -26,9 +31,8 @@ layout: default
             {% for post in site.categories[category] limit: 1 %}
             {% assign empty-figure = nil %}
             {% endfor %}
-            <div class="c-categories__container {{empty-figure}}">
-              <h2 class="c-categories__header" style="text-align: left;">{{ category }} <span>{{site.categories[category] | size}}</span></h2>
-            </div>
+            {{ category }} <div class="category-count">{{site.categories[category] | size}}</div>
+            
           </a>
         </li>
         {% endfor %}
@@ -74,3 +78,9 @@ layout: default
 <main class="c-content">
   {{ content }}
 </main> <!-- /.c-content -->
+
+<script>
+  function test(site){
+    console.log(site)
+  }
+</script>
