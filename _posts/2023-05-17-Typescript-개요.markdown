@@ -3,6 +3,7 @@ layout: post
 title: Typescript 개요(1)
 image: typescript_logo.png
 categories: typescript
+category: typescript
 excerpt: typescript 공부한 내용들을 정리해보았습니다.
 tags: [타입스트립트, typescript, vscode]
 ---

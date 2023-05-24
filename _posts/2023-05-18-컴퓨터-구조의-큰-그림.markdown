@@ -4,6 +4,7 @@ title: 컴퓨터 구조의 큰 그림
 image: computer_architecture_logo.png
 excerpt: 컴퓨터 구조의 큰 그림
 categories: 컴퓨터구조
+category: 컴퓨터구조
 tags: [컴퓨터구조, 컴퓨터핵심부품]
 ---
 

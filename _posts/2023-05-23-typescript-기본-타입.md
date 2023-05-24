@@ -5,6 +5,7 @@ image: typescript_logo.png
 excerpt: 
   typescript의 기본 타입
 categories: typescript
+category: typescript
 tags: [타입스트립트, typescript, 타입]
 ---
 ✔️ [타입스크립트 핸드북 사이트](https://www.typescriptlang.org/ko/docs/handbook/2/everyday-types.html)
