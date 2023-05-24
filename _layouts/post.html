@@ -23,7 +23,7 @@ layout: home
       <header class="c-article__header">
         <h1 class="c-article__title">{{page.title}}</h1>
         <div class="c-article__date">
-          <span>{{page.date | date: '%Y, %b %d'}}</span>
+          <span>{{page.date | date: '%Y-%m-%d'}}</span>
         </div>
       </header>
       {{page.content | markdownify}}

@@ -41,7 +41,8 @@ layout: home
         </svg>
         
         {% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words |
-          plus: 250 | divided_by: 250 | append: " 분 소요" }}{% endunless %}</span>
+          plus: 250 | divided_by: 250 | append: " 분 소요" }}{% endunless %}
+      </span>
     </div>
   </article> <!-- /.c-post -->
   {% endfor %}

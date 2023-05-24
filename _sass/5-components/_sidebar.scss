@@ -148,7 +148,14 @@
       margin: 20px 0;
     }
   }
+  .c-sidebar-body{
+    display: none;
+  }
   .c-sidebar-footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
     .c-social {
       .c-social__title {
         @include screen-reader();
@@ -157,9 +164,9 @@
     .c-social__list {
       margin: 0;
     }
-    .c-copyright {
-      @include screen-reader();
-    }
+    .c-copyright{
+      display: none;
+    } 
   }
 }
 
