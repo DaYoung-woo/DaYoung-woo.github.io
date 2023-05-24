@@ -230,6 +230,7 @@
         font-weight: 400;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         .category-count{
           font-size: 12px;
           line-height: normal;
@@ -239,7 +240,6 @@
           display: flex;
           border-radius: 20px;
           justify-content: center;
-          align-items: center;
           color: #ff5f2e;
         }
       }

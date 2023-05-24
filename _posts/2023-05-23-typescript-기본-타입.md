@@ -10,8 +10,6 @@ tags: [타입스트립트, typescript, 타입]
 ---
 ✔️ [타입스크립트 핸드북 사이트](https://www.typescriptlang.org/ko/docs/handbook/2/everyday-types.html)
 
-<br />
-
 ### typescript의 원시 타입
 
 - boolean
@@ -30,7 +28,6 @@ boolean 값이라고 일컫는 참/거짓(true/false) 값이다.
 {% highlight ts %}
 let show: boolean = true;
 {% endhighlight %}
-`<br/>`
 
 ---
 
@@ -61,7 +58,6 @@ let hex: number = 0xf00d;
 let binary: number = 0b1010;
 let octal: number = 0o744;
 {% endhighlight %}
-`<br/>`
 
 ---
 
@@ -74,7 +70,6 @@ let octal: number = 0o744;
 {% highlight ts %}
 let list: number[] = [1, 2, 3];
 {% endhighlight %}
-`<br/>`
 
 #### 2. 제네릭 배열 타입을 사용
 
@@ -83,15 +78,16 @@ let list: number[] = [1, 2, 3];
 
 {% highlight ts %}
 // string, number와 다르게 Array는 첫 스펠링이 대문자
-let arr: Array`<number>` = [1,2,3];
+let arr: Array `<number>` = [1,2,3];
 {% endhighlight %}
 
 - 만약 꺽새 괄호 안 타입과 다른 타입을 입력하면 오류로 표시된다.
-  {% highlight ts %}
-  // 'number' 형식은 'string' 형식에 할당할 수 없습니다.
-  let heroes: Array`<string>`= ['capt', 'Thor', 10]
-  {% endhighlight %}
-  `<br/>`
+
+{% highlight ts %}
+// 'number' 형식은 'string' 형식에 할당할 수 없습니다.
+let heroes: Array `<string>`= ['capt', 'Thor', 10]
+{% endhighlight %}
+
 
 ---
 
@@ -112,7 +108,6 @@ prettySure.toFixed(); // 오류: 프로퍼티 'toFixed'는 'Object'에 존재하
 
 - any의 사용은 지양되고 있다.
 - 컴파일러 플래그 **noImplicitAny**를 사용하면 암묵적으로 any로 간주하는 모든 경우에 오류를 발생시킬 수 있다.
-  `<br/>`
 
 ---
 
@@ -139,11 +134,10 @@ function add(a: number, b: number): number {
 	return a + b;
 }
 {% endhighlight %}
-`<br />`
+
 
 JS에서는 매개변수의 수와 인수가 일치하지 않아도 된다.
 ![1](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/94c0b2bb-9a7e-4184-b1eb-b7d350e59718)
-`<br />`
 
 하지만 TS에서는 오류로 인식된다.
 또한 매개변수에 타입이 표기되었다면, 해당 함수에 대한 인자는 검사가 이루어진다.
@@ -152,7 +146,7 @@ JS에서는 매개변수의 수와 인수가 일치하지 않아도 된다.
 
 인수가 초과되는 경우
 ![3](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/e5768c32-67d0-4de9-baa8-0a959ae5ff70)
-`<br />`
+
 
 {% highlight ts %}
 // 매개변수 타입 표기
@@ -165,7 +159,6 @@ greet(42);
 Argument of type 'number' is not assignable to parameter of type 'string'.
 
 {% endhighlight %}
-`<br />`
 
 #### 함수의 옵셔널 파라미터
 
@@ -181,7 +174,6 @@ log('hello','hi')
 
 필수 매개 변수는 선택 매개 변수 뒤에 올 수 없다.(에러 발생)
 ![Untitled (4)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/408880d8-c75f-4672-8033-3dac6a3bb83a)
-`<br />`
 
 ---
 
@@ -205,7 +197,9 @@ names.forEach((s) => {
 Property 'toUppercase' does not exist on type 'string'. Did you mean 'toUpperCase'?
 });
 {% endhighlight %}
-`<br />`
+
+
+---
 
 ### 객체 타입
 

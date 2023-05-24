@@ -18,6 +18,7 @@ layout: home
     <a class="c-post-thumbnail o-opacity" style="background-image: url({{"/images/" | prepend: site.baseurl | append : post.image}})"
         href="{{post.url | prepend: site.baseurl}}"></a>
     {% else %} {% endif %}
+    
     <div class="c-post-content">
       <h3 class="c-post-title">
         <a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
@@ -53,4 +54,3 @@ layout: home
 {% if postsCovered < postCount %}
   <button class="c-load-more c-btn c-btn--middle">Load more posts</button>
 {% endif %}
-{% include category.html %}

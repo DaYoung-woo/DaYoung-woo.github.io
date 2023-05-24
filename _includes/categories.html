@@ -1,4 +1,4 @@
-<div class="c-categories" style="display: none;">
+<div class="c-categories" >
   <ul class="c-categories__list u-lists-reset">
     {% capture cats %} {% for cat in site.categories %} {{ cat | first }} {% endfor %} {% endcapture %} {% assign sortedCats
     = cats | split: ' ' | sort %} {% for category in sortedCats %}
@@ -24,4 +24,4 @@
     </li>
     {% endfor %}
   </ul>
-</div> <!-- ./c-categories -->
+</div>

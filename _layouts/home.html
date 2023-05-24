@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+
+
 <aside class="c-sidebar">
   <div class="c-sidebar-author">
     <div class="c-author__cover">
@@ -20,7 +22,8 @@ layout: default
     <ul class="sidebar-category">
       <li>
         <a href="{{ site.baseurl }}/">
-          전체 <div class="category-count">{{post}}</div>
+          {% assign postCount = site.posts | size %}
+          전체 <div class="category-count">{{postCount}}</div>
         </a>
       </li>
       {% capture cats %} {% for cat in site.categories %} {{ cat | first }} {% endfor %} {% endcapture %} {% assign sortedCats = cats | split: ' ' | sort %} {% for category in sortedCats %}
