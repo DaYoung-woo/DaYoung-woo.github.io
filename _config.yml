@@ -23,12 +23,13 @@ google-analytics: # Add your identifier. For example UA-99631805-1
 
 # Comment Section (Disqus)
 disqus-identifier: mr-brown # Add your shortname for Disqus Comment. For example mr-brown
-
+  
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 plugins:
   - jekyll-paginate
+  - jekyll-archives
 
 paginate: 8
 paginate_path: "/page/:num/"
