@@ -3,7 +3,6 @@ source "https://rubygems.org"
 gem 'bundler'
 gem 'jekyll'
 gem 'jekyll-paginate'
-gem 'github-pages'
 gem 'mini_racer'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
