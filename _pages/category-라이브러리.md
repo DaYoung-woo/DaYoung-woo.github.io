@@ -1,8 +1,8 @@
 ---
 layout: category
-title: "git"
-category: git
-permalink: /category/git/
+title: "라이브러리"
+category: 라이브러리
+permalink: /category/라이브러리/
 ---
 <h1>{{ page.title }}</h1>
 

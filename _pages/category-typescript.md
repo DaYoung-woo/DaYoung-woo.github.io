@@ -1,8 +1,8 @@
 ---
 layout: category
-title: "git"
-category: git
-permalink: /category/git/
+title: "typescript"
+category: typescript
+permalink: /category/typescript/
 ---
 <h1>{{ page.title }}</h1>
 
