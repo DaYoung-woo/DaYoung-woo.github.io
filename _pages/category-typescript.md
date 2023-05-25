@@ -1,8 +1,8 @@
 ---
 layout: category
-title: "컴퓨터구조"
-category: 컴퓨터구조
-permalink: /category/컴퓨터구조/
+title: "git"
+category: git
+permalink: /category/git/
 ---
 <h1>{{ page.title }}</h1>
 
