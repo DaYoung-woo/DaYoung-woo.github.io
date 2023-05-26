@@ -243,13 +243,11 @@
           color: #444;
         }
       }
-    }
-    li:first-child {
-      a {
+      a.active {
         color: #ff5f2e;
         .category-count{ color: #ff5f2e; }
       }
-    } 
+    }
   }
   ul::-webkit-scrollbar {
     width: 8px;

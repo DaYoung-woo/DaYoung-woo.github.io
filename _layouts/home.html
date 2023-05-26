@@ -21,21 +21,31 @@ layout: default
     <div class="c-social__title">category</div>
     <ul class="sidebar-category">
       <li>
+        {% if page.url  == '/' %}
+        <a href="{{ site.baseurl }}/" class="active">
+        {% else %}
         <a href="{{ site.baseurl }}/">
+        {% endif %}
           {% assign postCount = site.posts | size %}
           전체 <div class="category-count">{{postCount}}</div>
         </a>
       </li>
       {% capture cats %} {% for cat in site.categories %} {{ cat | first }} {% endfor %} {% endcapture %} {% assign sortedCats = cats | split: ' ' | sort %} {% for category in sortedCats %}
       {{cat}}
-        <li >
+      
+        <li>
           {% assign cat_dir = site.category_dir | default: 'category' %}
+          {% assign en_category = category | url_encode %}
+          {% if page.url contains en_category %} 
+          <a href="{{ site.baseurl }}/{{ cat_dir }}/{{ category | downcase | slugify }}/" class="active">
+          {% else %}
           <a href="{{ site.baseurl }}/{{ cat_dir }}/{{ category | downcase | slugify }}/">
+          {% endif %}
             {% for post in site.categories[category] limit: 1 %}
             {% assign empty-figure = nil %}
             {% endfor %}
-            {{ category }} <div class="category-count">{{site.categories[category] | size}}</div>
-            
+            <div class="cagory-name">{{ category }} </div>
+            <div class="category-count">{{site.categories[category] | size}}</div>
           </a>
         </li>
         {% endfor %}
