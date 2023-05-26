@@ -35,13 +35,8 @@ layout: default
       
         <li>
           {% assign cat_dir = site.category_dir | default: 'category' %}
-          {% assign en_category = category | url_encode %}
-          {% assign en_url = cat_dir | url_encode %}
-          {% if page.url contains en_category %} 
-          <a href="{{ site.baseurl }}/{{ cat_dir }}/{{ category }}/" class="active">
-          {% else %}
           <a href="{{ site.baseurl }}/{{ cat_dir }}/{{ category }}/">
-          {% endif %}
+          
             {% for post in site.categories[category] limit: 1 %}
             {% assign empty-figure = nil %}
             {% endfor %}
