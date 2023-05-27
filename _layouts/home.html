@@ -21,11 +21,7 @@ layout: default
     <div class="c-social__title">category</div>
     <ul class="sidebar-category">
       <li>
-        {% if page.url  == '/' %}
         <a href="{{ site.baseurl }}/" class="active">
-        {% else %}
-        <a href="{{ site.baseurl }}/">
-        {% endif %}
           {% assign postCount = site.posts | size %}
           전체 <div class="category-count">{{postCount}}</div>
         </a>
