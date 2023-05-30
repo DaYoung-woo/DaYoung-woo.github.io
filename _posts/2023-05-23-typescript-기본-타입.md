@@ -16,8 +16,10 @@ tags: [타입스트립트, typescript, 타입]
 - number
 - string
 
-String, Number, Boolean와 같은 (대문자로 시작하는) 타입은 유효한 타입이지만, 코드상에서 이러한 특수 내장 타입을 사용하는 경우는 극히 드물다.
-항상 string, number, boolean 타입을 사용을 권장한다고 한다.
+String, Number, Boolean와 같은 (대문자로 시작하는) 타입은 유효한 타입이지만, 코드상에서 이러한 특수 내장 타입을 사용하는 경우는 극히 드물다.  
+항상 string, number, boolean 타입을 사용을 권장한다고 한다.  
+
+> **TIP**  위와 같이 `:`를 이용하여 자바스크립트 코드에 타입을 정의하는 방식을 타입 표기(Type Annotation)라고 한다.
 
 ---
 
@@ -33,7 +35,7 @@ let show: boolean = true;
 
 ### number
 
-부동 소수에는 `number`라는 타입이 붙혀진다.
+부동 소수에는 `number`라는 타입이 붙혀진다.  
 16진수, 10진수 뿐만 아니라 진수, 8진수 리터럴도 지원한다.
 
 {% highlight ts %}
@@ -42,14 +44,14 @@ let hex: number = 0xf00d;
 let binary: number = 0b1010;
 let octal: number = 0o744;
 {% endhighlight %}
-`<br/>`
+<br/>
 
 ---
 
 ### string
 
-텍스트 데이터 타입을 `string`으로 표현한다.
-큰따옴표 (`"`)나 작은따옴표 (`'`)를 문자열 데이터를 감싸는데 사용한다.
+텍스트 데이터 타입을 `string`으로 표현한다.  
+큰따옴표 (`"`)나 작은따옴표 (`'`)를 문자열 데이터를 감싸는데 사용한다.  
 **템플릿 문자열**을 사용하면 여러 줄에 걸쳐 문자열을 작성할 수 있으며, 표현식을 포함시킬 수도 있다.
 
 {% highlight ts %}
@@ -70,10 +72,10 @@ let octal: number = 0o744;
 {% highlight ts %}
 let list: number[] = [1, 2, 3];
 {% endhighlight %}
-
+<br/>
 #### 2. 제네릭 배열 타입을 사용
 
-**Array<>** 꺽새 괄호 안에 사용할 타입을 입력해줘야 한다.
+**Array<>** 꺽새 괄호 안에 사용할 타입을 입력해줘야 한다.  
 **[number]**는 전혀 다른 의미를 가진다.(튜플 타입에서 참조)
 
 {% highlight ts %}
@@ -93,13 +95,14 @@ let heroes: Array `<string>`= ['capt', 'Thor', 10]
 
 ### any
 
-특정 값으로 인하여 타입 검사 오류가 발생하는 것을 원하지 않을 때 사용할 수 있다.
-사용자로부터 받은 데이터나 서드 파티 라이브러리 같은 동적인 컨텐츠에서 오는 값은 타입을 알지 못할 수도 있다.
-이 경우 any를 사용하면 타입 검사를 하지 않고, 그 값들이 컴파일 시간에 검사를 통과시켜준다.
-object를 사용하면 되지 않을까? 생각할 수 있지만 object를 쓰면 오류가 발생할 수 있다.
+특정 값으로 인하여 타입 검사 오류가 발생하는 것을 원하지 않을 때 사용할 수 있다.  
+사용자로부터 받은 데이터나 서드 파티 라이브러리 같은 동적인 컨텐츠에서 오는 값은 타입을 알지 못할 수도 있다.  
+이 경우 any를 사용하면 타입 검사를 하지 않고, 그 값들이 컴파일 시간에 검사를 통과시켜준다.  
+object를 사용하면 되지 않을까? 생각할 수 있지만 object를 쓰면 오류가 발생할 수 있다.  
+
 {% highlight ts %}
 let notSure: any = 4;
-notSure.ifItExists(); // 성공, ifItExists 는 런타임엔 존재할 것입니다.
+notSure.ifItExists(); // 성공, ifItExists 는 런타임엔 존재할 것입니다.  
 notSure.toFixed(); // 성공, toFixed는 존재합니다. (하지만 컴파일러는 검사하지 않음)
 
 let prettySure: Object = 4;
@@ -113,8 +116,8 @@ prettySure.toFixed(); // 오류: 프로퍼티 'toFixed'는 'Object'에 존재하
 
 ### 함수
 
-함수는 JavaScript에서 데이터를 주고 받는 주요 수단이다.
-TypeScript에서는 함수의 입력 및 출력 타입을 지정할 수 있다.
+함수는 JavaScript에서 데이터를 주고 받는 주요 수단이다.  
+TypeScript에서는 함수의 입력 및 출력 타입을 지정할 수 있다.  
 
 {% highlight ts %}
 // 함수의 파라미터에 타입을 정의하는 방식
@@ -135,17 +138,16 @@ function add(a: number, b: number): number {
 }
 {% endhighlight %}
 
+JS에서는 매개변수의 수와 인수가 일치하지 않아도 된다.  
+![1](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/94c0b2bb-9a7e-4184-b1eb-b7d350e59718)  
 
-JS에서는 매개변수의 수와 인수가 일치하지 않아도 된다.
-![1](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/94c0b2bb-9a7e-4184-b1eb-b7d350e59718)
+하지만 TS에서는 오류로 인식된다.  
+또한 매개변수에 타입이 표기되었다면, 해당 함수에 대한 인자는 검사가 이루어진다.  
+인수가 부족한 경우  
+![2](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/f35ddc45-9941-45ac-bf17-bbfd3f8fde59)  
 
-하지만 TS에서는 오류로 인식된다.
-또한 매개변수에 타입이 표기되었다면, 해당 함수에 대한 인자는 검사가 이루어진다.
-인수가 부족한 경우
-![2](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/f35ddc45-9941-45ac-bf17-bbfd3f8fde59)
-
-인수가 초과되는 경우
-![3](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/e5768c32-67d0-4de9-baa8-0a959ae5ff70)
+인수가 초과되는 경우  
+![3](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/e5768c32-67d0-4de9-baa8-0a959ae5ff70)  
 
 
 {% highlight ts %}
@@ -159,6 +161,7 @@ greet(42);
 Argument of type 'number' is not assignable to parameter of type 'string'.
 
 {% endhighlight %}
+<br />
 
 #### 함수의 옵셔널 파라미터
 
@@ -219,7 +222,7 @@ let person2: object = {name: string, age: number} = {
 	age: 200
 }
 {% endhighlight %}
-`<br />`
+<br />
 
 #### 옵셔널 프로퍼티
 
