@@ -146,8 +146,9 @@ let capt: PersonType = {
 };
 {% endhighlight %}
 
-이미지 2  
-이미지 3  
+![Untitled (6)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/4671e7cf-cb2a-4d35-b9b5-eda86003ace0)
+<br />
+![Untitled (7)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/b84ce8fa-3d2d-46c1-9177-33a3a167b316)
 
 <br/>
 
