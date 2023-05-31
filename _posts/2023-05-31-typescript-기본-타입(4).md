@@ -116,15 +116,15 @@ function liveDangerously(x?: number | undefined) {
 
 #### 숫자형 enum
 이넘에서 값을 세팅하지 않으면 값이 0부터 세팅된다.  
-이미지1
+![Untitled (8)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/9625bc73-e496-462e-981f-c3e5beef41f7)
 <br />  
-이미지2
+![Untitled (9)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/27e6c409-a822-4bf7-b477-db6db8b02c4a)
 <br />
 
 값을 설정한 경우, 설정한 숫자부터 순차적으로 1씩 증가한다.
-이미지3
+![Untitled (10)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/7e1f942c-4291-4212-80c9-1dafb4e0d43d)
 <br />  
-이미지4
+![Untitled (11)](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/50d3a686-1e98-40c6-a065-33df542330b7)
 <br />
 
 #### 문자형 enum
