@@ -179,4 +179,15 @@ npx tsc --init
 }
 {% endhighlight %}
 설정들이 아주 많은데 아직 다 파악하지 못했다.  
-나중에는 이 설정들을 이해해서 더 많이 사용해보고 싶다.
+나중에는 이 설정들을 이해해서 더 많이 사용해보고 싶다.  
+<br/>
+
+설정들을 활성화했을 때와 안했을 때가 궁금해서 몇가지 테스트를 해보았다.  
+`allowJs`를 `true`로 설정해주었을 때는 오류가 발생하지 않았다.
+![1](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/a5189f35-47d0-4441-98a3-6077da03bfb8)  
+<br/>
+
+하지만 `false`로 설정해주니 jsx파일이나 js파일을 `import`하는 부분에서 에러가 발생했다.
+난 아직 타린이(?)니까 이 설정이 꼭 필요해😂😂😂
+![2](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/a129f039-f9d8-4ce6-91b7-06ba48ad441e)
+
