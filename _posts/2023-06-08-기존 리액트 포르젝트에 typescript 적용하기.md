@@ -212,3 +212,6 @@ reportWebVitals();
 난 아직 타린이(?)니까 이 설정이 꼭 필요해😂😂😂
 ![2](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/a129f039-f9d8-4ce6-91b7-06ba48ad441e)
 
+![image](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/352bbf4e-a6ee-43e6-b65c-39469a2a0319)  
+`import` 구문들은 따로 타입을 설정해주지 않았는데 에러가 발생하지 않았다.  
+`npm install @types/react @types/react-dom`를 통해 타입들을 설치해줘서 그런 것 같다.
