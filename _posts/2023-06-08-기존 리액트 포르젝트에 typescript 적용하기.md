@@ -174,7 +174,7 @@ npx tsc --init
     "esModuleInterop": true,  // ES 모듈과 CommonJS 모듈 간의 상호 운용성을 향상시키기 위해 추가적인 코드를 생성
     "forceConsistentCasingInFileNames": true,  // 파일 이름의 대소문자 일관성을 검사하는 옵션
     "strict": true,  // 엄격한 타입 체크 옵션을 활성화
-    "skipLibCheck": true  
+    "skipLibCheck": true  // .d.ts 파일에 대한 타입 체크를 건너뛰도록 설정
   }
 }
 {% endhighlight %}
@@ -182,12 +182,33 @@ npx tsc --init
 나중에는 이 설정들을 이해해서 더 많이 사용해보고 싶다.  
 <br/>
 
+이제 프로젝트의 루트인 index.jsx를 index.tsx로 바꿔줬다.
+typescript는 `document.getElementById("root")` 이 구문의 타입을 이해할 수 없다.
+따라서 HTMLElement로 타입 단언을 해줘야 한다.
+
+{% highlight tsx %}
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import AppTodo from "./views/AppTodo";
+
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+root.render(
+  <React.StrictMode>
+    <AppTodo />
+  </React.StrictMode>
+);
+
+reportWebVitals();
+{% endhighlight %}
+
 설정들을 활성화했을 때와 안했을 때가 궁금해서 몇가지 테스트를 해보았다.  
 `allowJs`를 `true`로 설정해주었을 때는 오류가 발생하지 않았다.
 ![1](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/a5189f35-47d0-4441-98a3-6077da03bfb8)  
 <br/>
 
-하지만 `false`로 설정해주니 jsx파일이나 js파일을 `import`하는 부분에서 에러가 발생했다.
+하지만 `false`로 설정해주니 jsx파일이나 js파일을 `import`하는 부분에서 에러가 발생했다.  
 난 아직 타린이(?)니까 이 설정이 꼭 필요해😂😂😂
 ![2](https://github.com/DaYoung-woo/DaYoung-woo.github.io/assets/131967254/a129f039-f9d8-4ce6-91b7-06ba48ad441e)
 
