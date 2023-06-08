@@ -182,9 +182,11 @@ npx tsc --init
 나중에는 이 설정들을 이해해서 더 많이 사용해보고 싶다.  
 <br/>
 
-이제 프로젝트의 루트인 index.jsx를 index.tsx로 바꿔줬다.
-typescript는 `document.getElementById("root")` 이 구문의 타입을 이해할 수 없다.
-따라서 HTMLElement로 타입 단언을 해줘야 한다.
+---
+
+이제 프로젝트의 루트인 index.jsx를 index.tsx로 바꿔줬다.  
+typescript는 `document.getElementById("root")` 이 구문의 타입을 이해할 수 없다.  
+따라서 HTMLElement로 타입 단언을 해줘야 한다.  
 
 {% highlight tsx %}
 import React from "react";
@@ -202,6 +204,8 @@ root.render(
 
 reportWebVitals();
 {% endhighlight %}
+
+---
 
 설정들을 활성화했을 때와 안했을 때가 궁금해서 몇가지 테스트를 해보았다.  
 `allowJs`를 `true`로 설정해주었을 때는 오류가 발생하지 않았다.
