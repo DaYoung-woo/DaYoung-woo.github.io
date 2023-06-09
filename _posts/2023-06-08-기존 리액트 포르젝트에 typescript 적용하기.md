@@ -4,8 +4,8 @@ title: 기존 리액트 포르젝트에 typescript 설치하기
 image: typescript_logo.png
 excerpt: typescript
 categories: typescript
-category: typescript
-tags: [react, typescript, tsx, tsc]
+category: [typescript, react]
+tags: [react, typescript, tsx, tsc, react, tsconfig.json, 리액트, 타입스크립트]
 ---
 
 최근에 열심히 공부중인 typescript!  
@@ -175,6 +175,8 @@ npx tsc --init
     "forceConsistentCasingInFileNames": true,  // 파일 이름의 대소문자 일관성을 검사하는 옵션
     "strict": true,  // 엄격한 타입 체크 옵션을 활성화
     "skipLibCheck": true  // .d.ts 파일에 대한 타입 체크를 건너뛰도록 설정
+    "include": ["src/**/*"],  // 컴파일에 포함할 파일 또는 디렉토리의 목록을 지정
+    "exclude": ["node_modules"] //  컴파일에서 제외할 파일 또는 디렉토리의 목록을 지정
   }
 }
 {% endhighlight %}
